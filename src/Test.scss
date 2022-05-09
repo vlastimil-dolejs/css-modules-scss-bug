@@ -1,0 +1,15 @@
+$property-var: color;
+$selector-var: test;
+
+.content {
+  padding: 8px;
+  margin: {
+    left: 8px;
+    right: 8px;
+  }
+  #{$property-var}: #000;
+}
+
+.#{$selector-var} {
+  padding: 8px;
+}

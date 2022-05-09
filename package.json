@@ -1,0 +1,35 @@
+{
+  "name": "css-modules-scss-bug",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "scripts": {
+    "compile-dev": "webpack --mode development --watch --progress --config webpack.config.js"
+  },
+  "author": "Vlastimi Dolejs",
+  "dependencies": {
+    "@dr.pogodin/babel-plugin-react-css-modules": "~6.8.0",
+    "core-js": "~3.22.4",
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/plugin-transform-runtime": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-react": "^7.16.7",
+    "autoprefixer": "^10.4.7",
+    "babel-loader": "^8.2.5",
+    "css-loader": "~6.7.1",
+    "cssnano": "^5.1.7",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "postcss": "^8.4.13",
+    "postcss-loader": "^6.2.1",
+    "postcss-scss": "~4.0.4",
+    "sass": "^1.51.0",
+    "sass-loader": "^12.6.0",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
+  }
+}
