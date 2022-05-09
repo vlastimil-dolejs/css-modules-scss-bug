@@ -16,8 +16,7 @@ module.exports = function (api) {
                     "syntax": "postcss-scss"
                 }
             }
-        }],
-        "@babel/plugin-transform-runtime",
+        }]
     ];
 
     api.cache(true);
@@ -25,12 +24,5 @@ module.exports = function (api) {
     return {
         presets,
         plugins,
-        shouldPrintComment: function(comment) {
-            // Keep JSON5 magic comments used for Webpack hints
-            if ((/^\s?webpack[A-Z][A-Za-z]+:/).exec(comment)) {
-                return true;
-            }
-            return false;
-        }
     };
 };

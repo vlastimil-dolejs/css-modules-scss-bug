@@ -4,9 +4,6 @@ module.exports = (env, argv) => {
     return {
         output: {
             filename: `test.js`,
-            library: 'Test',
-            libraryTarget: 'umd',
-            umdNamedDefine: true,
             clean: true
         },
         module: {
@@ -23,7 +20,7 @@ module.exports = (env, argv) => {
                     }
                 },
                 {
-                    test: /\.s?css$/,
+                    test: /\.scss$/,
                     exclude: /node_modules/,
                     use: [
                         MiniCssExtractPlugin.loader,
@@ -33,11 +30,10 @@ module.exports = (env, argv) => {
                                 modules: {
                                     localIdentName: "[path][name]__[local]",
                                 },
-                                importLoaders: 2, // to include postcss-loader and sass-loader
+                                importLoaders: 1, // to include sass-loader
                                 sourceMap: true,
                             }
                         },
-                        "postcss-loader",
                         "sass-loader"
                     ]
                 }
